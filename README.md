@@ -36,6 +36,14 @@ That's it! Now you're ready to build and run the base project!
 - **Clean Project:** Cleans the output directories and all their subdirectories.
 - **Build Effects:** Runs `fxc.exe` on all of the `.fx` files found in the Content/ subdirectories and outputs corresponding `.fxb` files that can be loaded through the Content Manager at runtime.
 
+
+## Visual Studio 2022 problems with .NET 4.0
+When building your project, this will try to find the .Net 4.0 SDK, but this is no longer supported from the offical VS installer. More information in this [post](https://learn.microsoft.com/en-us/dotnet/framework/install/guide-for-developers) and this [thread](https://learn.microsoft.com/en-us/answers/questions/993957/how-to-target-net-framework-4-0-in-vs-2022-on-wind)
+
+> Starting with Visual Studio 2022, Visual Studio no longer includes .NET Framework components for .NET Framework 4.0 - 4.5.1 because these versions are no longer supported. Visual Studio 2022 and later versions can't build apps that target .NET Framework 4.0 through .NET Framework 4.5.1. To continue building these apps, you can use Visual Studio 2019 or an earlier version.
+
+If you follow these [steps](https://stackoverflow.com/questions/78337914/how-to-target-net-framework-4-0-in-vs-2022-on-windows-11/78337958#78337958), you can start building your project without any issue 😄.
+
 ## License and Credits ##
 FNA VSCode Template is released under the Microsoft Public License.
 Many thanks to Andrew Russell for his [FNA Template](https://github.com/AndrewRussellNet/FNA-Template), from which I learned a lot (and borrowed a little).
